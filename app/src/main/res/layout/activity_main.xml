@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="50"
+    tools:context="sourav.calculator.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/tableLayout"
+        android:layout_marginBottom="20dp"
+        android:gravity="bottom">
+
+        <TextView
+            android:id="@+id/history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:gravity="end"
+            android:textAlignment="textEnd"
+            android:textSize="34sp"
+            android:textColor="#BDBDBD"/>
+        <TextView
+            android:id="@+id/display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="end"
+            android:textAlignment="textEnd"
+            android:textSize="64sp"/>
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:layout_alignParentBottom="true">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:background="#BDBDBD">
+
+            <Button
+                android:id="@+id/clear"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="2.5"
+                android:background="#EEEEEE"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/c"
+                android:textColor="#FF7043"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/delete"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="2.5"
+                android:background="#EEEEEE"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/ce"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/memory"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="2.5"
+                android:background="#EEEEEE"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/m"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button20"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="2.5"
+                android:background="#E0E0E0"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/xn"
+                android:textAllCaps="false"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:background="#BDBDBD">
+
+            <Button
+                android:id="@+id/one"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="2.5"
+                android:background="#EEEEEE"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/input_1"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/two"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="2.5"
+                android:background="#EEEEEE"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/input_2"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/three"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="2.5"
+                android:background="#EEEEEE"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/input_3"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/divide"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="2.5"
+                android:background="#E0E0E0"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/divide"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:background="#BDBDBD">
+
+            <Button
+                android:id="@+id/four"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="2.5"
+                android:background="#EEEEEE"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/input_4"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/five"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="2.5"
+                android:background="#EEEEEE"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/input_5"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/six"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="2.5"
+                android:background="#EEEEEE"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/input_6"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/multiply"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="2.5"
+                android:background="#E0E0E0"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/multiply"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:background="#BDBDBD">
+
+            <Button
+                android:id="@+id/seven"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="2.5"
+                android:background="#EEEEEE"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/input_7"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/eight"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="2.5"
+                android:background="#EEEEEE"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/input_8"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/nine"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="2.5"
+                android:background="#EEEEEE"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/input_9"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/subs"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="2.5"
+                android:background="#E0E0E0"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/minus"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:background="#BDBDBD">
+
+            <Button
+                android:id="@+id/dot"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="2.5"
+                android:background="#EEEEEE"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/dot"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/zero"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="2.5"
+                android:background="#EEEEEE"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/input_0"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/equals"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="2.5"
+                android:background="#EEEEEE"
+                android:foreground="@drawable/ripple_btn"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/equals"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/add"
+                style="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:background="#FF7043"
+                android:foreground="@drawable/ripple_plus"
+                android:onClick="ButtonPressActions"
+                android:stateListAnimator="@null"
+                android:text="@string/plus"
+                android:textSize="18sp" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>
